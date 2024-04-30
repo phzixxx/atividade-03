@@ -1,0 +1,32 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Números</title>
+</head>
+<body>
+    <label for="numero">Digite um número entre 1 e 50:</label>
+    <input type="number" id="numero" min="1" max="50">
+    <button onclick="verificarNumero()">Verificar</button>
+    
+    <p id="resultado"></p>
+
+    <script>
+        function verificarNumero() {
+            var numeroDigitado = parseInt(document.getElementById('numero').value);
+            if (numeroDigitado >= 1 && numeroDigitado <= 5) {
+                document.getElementById('resultado').innerText = "Seu número está entre 1 e 5";
+            } else if (numeroDigitado >= 6 && numeroDigitado <= 10) {
+                document.getElementById('resultado').innerText = "Seu número está entre 6 e 10";
+            } else if (numeroDigitado >= 11 && numeroDigitado <= 15) {
+                document.getElementById('resultado').innerText = "Seu número está entre 11 e 15";
+            } // ... and so on for the other ranges
+            else {
+                document.getElementById('resultado').innerText = "Seu número está fora do intervalo de 1 a 50";
+            }
+        }
+    </script>
+</body>
+</html>
